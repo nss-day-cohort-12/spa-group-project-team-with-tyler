@@ -1,0 +1,19 @@
+{
+	"messages" : [
+		{
+			"text" : "This is the first default message. Not saying it's the best default message, it's just the one at the top."
+		},
+		{
+			"text" : "Alright, everyone knows first is the worst. Which means, you got that right, that I'm the best."
+		},
+		{
+			"text" : "Getting pretty hard to be creative now. THe hunger is setting in. When's lunch?"
+		},
+		{
+			"text" : "Probably around the same time it happens every day. Call it noonish."
+		},
+		{
+			"text" : "Is it noon yet?"
+		}
+	]
+}
