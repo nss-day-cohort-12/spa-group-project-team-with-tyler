@@ -1,0 +1,9 @@
+.navbar {
+	width: 100%;
+}
+
+.messageBox {
+	border: 2px solid firebrick;
+	border-radius: 10px;
+	min-height: 300px;
+}

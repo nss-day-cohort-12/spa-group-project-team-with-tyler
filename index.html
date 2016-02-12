@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chatty</title>
+	<!-- Bootstrap -->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+	<!--  -->
+	<link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+
+	<form class="navbar-form navbar-left navbar" role="search">
+  	<div class="form-group">
+    	Chatty!<input type="text" class="form-control" placeholder="Enter Message">
+  	</div>
+  	<button type="submit" class="btn btn-default">Clear Messages</button>
+  	<input type="checkbox">Dark Theme
+  	<input type="checkbox">Large Text
+	</form>
+
+
+	<div class="container">
+		<div class="row">
+			<header id="messageHeader">Messages:</header>
+			<div id="outputField" class="col-md-12 messageBox">MESSAGES GO HERE*</div>
+		</div>
+	</div>
+
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<!-- Bootstrap -->
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script src="xhr.js"></script>
+	<script src="populate.js"></script>
+	<script src="remove.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
