@@ -1,9 +1,19 @@
+body { 
+	padding-top: 70px; 
+}
+
 .navbar {
+	color: white;
+	margin: 0;
+	padding: 12px;
+	background-color: grey;
+	border: 1px solid black;
+	opacity: .9;
 	width: 100%;
 }
 
 .messageBox {
 	border: 2px solid firebrick;
 	border-radius: 10px;
-	min-height: 300px;
+	min-height: 500px;
 }
