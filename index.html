@@ -15,18 +15,22 @@
 
 	<form class="navbar-form navbar-left navbar" role="search">
   	<div class="form-group">
-    	Chatty!<input type="text" class="form-control" placeholder="Enter Message">
+    	Chatty!<input id="textInput" type="text" class="form-control" placeholder="Enter Message">
   	</div>
-  	<button type="submit" class="btn btn-default">Clear Messages</button>
-  	<input type="checkbox">Dark Theme
-  	<input type="checkbox">Large Text
+  	<button id="clearButton" type="submit" class="btn btn-default">Clear Messages</button>
+  	<input id="checkboxDark" type="checkbox">Dark Theme
+  	<input id="checkboxLarge" type="checkbox">Large Text
 	</form>
 
 
 	<div class="container">
 		<div class="row">
 			<header id="messageHeader">Messages:</header>
-			<div id="outputField" class="col-md-12 messageBox">MESSAGES GO HERE*</div>
+			<div id="outputField" class="col-md-12 messageBox">
+				<div id="0" class="message">Sample Message 
+					<button>Delete</button>
+				</div>
+			</div>
 		</div>
 	</div>
 
