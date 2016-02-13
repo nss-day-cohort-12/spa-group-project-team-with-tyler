@@ -35,6 +35,6 @@ inputEl.addEventListener("keyup", function(e){
 		console.log(messageText);
 		// Chatty.newMessage("outputField", messageText);
 		inputEl.value = "";
-
+		clearButton.disabled = false;
 	}
 })
