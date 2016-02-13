@@ -17,3 +17,12 @@ body {
 	border-radius: 10px;
 	min-height: 500px;
 }
+
+.dark {
+	background-color: darkgray;
+	color: white;
+}
+
+.large {
+	font-size: 2em;
+}
