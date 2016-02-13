@@ -1,5 +1,5 @@
 var Chatty = (function(originalChatty){
-	var messagesArray = [];
+	
 
 	originalChatty.loadJSON = function() {
 		var JSONRequest = new XMLHttpRequest();
@@ -9,11 +9,10 @@ var Chatty = (function(originalChatty){
 			var messagesFromJson = messageObject.messages;
 			console.log(messagesFromJson);
 			messagesFromJson.forEach(function(currentObject){
-				messagesArray.push(currentObject.text);
+				Chatty.newMessage("outputField", currentObject.text);
+				//Had to move the private array to the populate page, turns out variables aren't shared as easily as I thought.
 			});
-				console.log(messagesArray);
-
-				//At this point the JSON is laoded and the messages are pushed into the messagesArray. If you run a forEach or a for loop on messagesArray here with newMessage it might do the thing.
+				
 
 		})
 
@@ -23,5 +22,3 @@ var Chatty = (function(originalChatty){
 
 	return originalChatty;
 })(Chatty || {});
-
-Chatty.loadJSON();
