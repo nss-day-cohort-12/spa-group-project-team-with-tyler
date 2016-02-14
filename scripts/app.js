@@ -5,6 +5,7 @@ var checkboxDark = document.getElementById("checkboxDark");
 var checkboxLarge = document.getElementById("checkboxLarge");
 var messageText = '';
 var messageId;
+var oldMessage;
 
 clearButton.addEventListener("click", function(){
 	messageContainer.innerHTML = "";
@@ -24,8 +25,8 @@ messageContainer.addEventListener("click", function(e){
 	if (e.target.innerHTML === "Delete") {
 		messageId = e.target.parentNode.id;
 		console.log(messageId);
-		// Chatty.deleteIndex(messageId);
-		// Chatty.deleteMessage(messageId);
+		Chatty.deleteIndex(messageId);
+		Chatty.deleteMessage(messageId);
 	}
 });
 
@@ -33,8 +34,14 @@ inputEl.addEventListener("keyup", function(e){
 	if (e.keyCode == 13) {
 		messageText = inputEl.value;
 		console.log(messageText);
-		// Chatty.newMessage("outputField", messageText);
+		Chatty.newMessage("outputField", messageText);
 		inputEl.value = "";
 		clearButton.disabled = false;
+		if (document.getElementsByClassName("message").length > 20) {
+			oldMessage = document.getElementsByClassName("message")[0];
+			oldMessage.parentNode.removeChild(oldMessage);
+		}
 	}
 })
+
+Chatty.loadJSON();
