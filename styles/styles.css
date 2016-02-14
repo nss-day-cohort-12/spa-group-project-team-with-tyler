@@ -12,6 +12,23 @@ body {
 	width: 100%;
 }
 
+.message {
+	background-color: skyblue;
+	border: 2px solid blue;
+	border-radius: 10px;
+	margin: 10px;
+	padding: 5px;
+}
+
+.message button {
+	margin: 5px;
+}
+
+.timestamp {
+	margin-top: -5px;
+	color: gray;
+}
+
 .messageBox {
 	border: 2px solid firebrick;
 	border-radius: 10px;
