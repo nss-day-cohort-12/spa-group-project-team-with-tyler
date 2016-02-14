@@ -1,5 +1,7 @@
+/*Dark Theme*/
+
 body { 
-	background: beige;
+	background: #090C28;
 	padding-top: 150px; 
 }
 
@@ -7,12 +9,11 @@ body {
 	font-size: 2em;
 }
 
-/*Navbar Styling*/
 .navbar {
-	background-image: url("/images/Autumn_Plaid_Background.png");
+	background-image: url("/images/Dark_Autumn_Plaid_Background.png");
 	background-size: contain;
-	border-top: 3px solid #6E0700;
-	border-bottom: 3px solid #6E0700;
+	border-top: 3px solid beige;
+	border-bottom: 3px solid beige;
 	font-weight: 900;
 	margin: 0;
 	padding-top: 20px;
@@ -41,12 +42,11 @@ body {
 	margin-bottom: 31px;
 }
 
-/*Chatty logo text*/
 #logoText {
-  -webkit-text-stroke: .5px black;
+  -webkit-text-stroke: .5px white;
 	font-family: 'Sansita One', cursive;
 	font-size: 4em;
-	color: #6E0700;
+	color: beige;
 	float: left;
 	margin: 0px;
 	padding-right: 25px;
@@ -60,32 +60,35 @@ body {
 	font-family: 'Sansita One', cursive;
 	font-weight: 900;
 	font-size: 1.3em;
-	color: #6E0700;
 }
 
-/*Header above message board*/
+.navbar label {
+	color: beige;
+}
+
 #messageHeader {
 	font-family: 'Sansita One', cursive;
-	color: #6E0700;
+	color: beige;
 	font-size: 1.5em;
 }
 
-/*Message board styling*/
 .messageBox {
 	box-sizing: border-box;
 	padding: 20px;
-	border: 5px solid #6E0700;
+	border: 5px solid darkblue;
 	border-radius: 10px;
 	min-height: 1000px;
 }
 
 .newMessages {
+	color: beige;
 	font-size: 1.2em;
 	font-weight: bold;
 	font-family: helvetica;
 }
 
 .deleteButton {
+	color: black;
 	font-size: 10px;
 	margin: 15px;
 	border-radius: 5px;
