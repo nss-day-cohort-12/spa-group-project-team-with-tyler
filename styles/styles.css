@@ -1,19 +1,141 @@
 body { 
-	padding-top: 70px; 
+	background: beige;
+	padding-top: 150px; 
 }
-
+/*Navbar Styling*/
 .navbar {
-	color: white;
+	background-image: url("/images/Autumn_Plaid_Background.png");
+	background-size: contain;
+	border-top: 3px solid #6E0700;
+	border-bottom: 3px solid #6E0700;
+	font-weight: 900;
 	margin: 0;
-	padding: 12px;
-	background-color: grey;
-	border: 1px solid black;
+	padding-top: 20px;
 	opacity: .9;
 	width: 100%;
 }
 
-.messageBox {
-	border: 2px solid firebrick;
-	border-radius: 10px;
-	min-height: 500px;
+.navbar input {
+	margin-top: 10px;
 }
+
+.navbar button {
+	margin-top: 10px;
+}
+
+/*Chatty logo text*/
+#logoText {
+  -webkit-text-stroke: .5px black;
+	font-family: 'Sansita One', cursive;
+	font-size: 3.5em;
+	color: #6E0700;
+	float: left;
+	margin: 0px;
+	padding-right: 25px;
+}
+
+.checkboxes{
+	margin: 0;
+	padding-left: 200px;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	font-family: 'Sansita One', cursive;
+	font-weight: 900;
+	font-size: 1.3em;
+	color: #6E0700;
+}
+
+/*Header above message board*/
+#messageHeader {
+	font-family: 'Sansita One', cursive;
+	color: #6E0700;
+	font-size: 1.5em;
+}
+
+/*Message board styling*/
+.messageBox {
+	box-sizing: border-box;
+	padding: 20px;
+	border: 5px solid #6E0700;
+	border-radius: 10px;
+	min-height: 1000px;
+}
+
+
+/*Dark Theme*/
+
+/*body { 
+	background: #090C28;
+	padding-top: 150px; 
+}
+
+.navbar {
+	background-image: url("/images/Dark_Autumn_Plaid_Background.png");
+	background-size: contain;
+	border-top: 3px solid beige;
+	border-bottom: 3px solid beige;
+	font-weight: 900;
+	margin: 0;
+	padding-top: 20px;
+	opacity: .9;
+	width: 100%;
+}
+
+.navbar input {
+	margin-top: 10px;
+}
+
+.navbar button {
+	margin-top: 10px;
+}
+
+
+#logoText {
+  -webkit-text-stroke: .5px white;
+	font-family: 'Sansita One', cursive;
+	font-size: 3.5em;
+	color: beige;
+	float: left;
+	margin: 0px;
+	padding-right: 25px;
+}
+
+.checkboxes{
+	margin: 0;
+	padding-left: 200px;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	font-family: 'Sansita One', cursive;
+	font-weight: 900;
+	font-size: 1.3em;
+	color: beige;
+}
+
+#messageHeader {
+	font-family: 'Sansita One', cursive;
+	color: beige;
+	font-size: 1.5em;
+}
+
+.messageBox {
+	box-sizing: border-box;
+	padding: 20px;
+	border: 5px solid beige;
+	border-radius: 10px;
+	min-height: 1000px;
+}
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
