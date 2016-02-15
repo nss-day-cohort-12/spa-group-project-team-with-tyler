@@ -96,7 +96,7 @@ body {
 	border-radius: 5px;
 }
 
-.message p {
+.message section {
 	display: inline-block;
 }
 

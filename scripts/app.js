@@ -26,11 +26,11 @@ checkboxDark.addEventListener("click", function(){
 });
 
 checkboxLarge.addEventListener("click", function(){
-	document.body.classList.toggle("large");
-	clearButton.classList.toggle("largeButton");
-	clearButton.classList.toggle("normalSizeButton");
-	inputEl.classList.toggle("largeInput");
-	inputEl.classList.toggle("normalSizeInput");
+	document.getElementById("outputField").classList.toggle("large");
+	// clearButton.classList.toggle("largeButton");
+	// clearButton.classList.toggle("normalSizeButton");
+	// inputEl.classList.toggle("largeInput");
+	// inputEl.classList.toggle("normalSizeInput");
 });
 
 messageContainer.addEventListener("click", function(e){
