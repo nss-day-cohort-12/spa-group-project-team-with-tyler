@@ -95,5 +95,7 @@ body {
 	display: inline-block;
 }
 
-
-
+.timestamp {
+	margin-top: -5px;
+	color: gray;
+}

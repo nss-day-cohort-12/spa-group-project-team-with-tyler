@@ -7,16 +7,11 @@ var Chatty = (function(originalChatty){
 		return messagesArray;
 	}
 
-	Chatty.newMessage = function (elId, msgString) {
+	originalChatty.newMessage = function(elId, msgString, time) {
 		containerDiv = document.getElementById(elId);
 		messagesArray.push(msgString);
-		outputString = `<div id="${messagesArray.length -1}" class="message newMessages"<p>${msgString}</p><button class="deleteButton">Delete</button></div>`;
+		outputString = `<div id="${messagesArray.length - 1}" class="message newMessages"><p>${msgString}</p><button class="deleteButton">Delete</button><button class="deleteButton">Edit</button><section class="timestamp">Posted: ${time}</section></div>`;
 		containerDiv.innerHTML += outputString;
-
-		// for (var i = 0; i < messagesArray.length; i++) {
-		// 	outputString = messagesArray[i];
-		// };
-		// 	messageContainer.innerHTML += "<div id='message" + [i] + "' class='newMessages'>" + "User: " + outputString + "<button class='deleteButton'>Delete</button>" + "</div>";
 	}
 
 	originalChatty.deleteIndex = function(msgId) {
