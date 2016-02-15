@@ -83,15 +83,19 @@ body {
 	font-size: 1.2em;
 	font-weight: bold;
 	font-family: helvetica;
+		border: 1px solid #6E0700;
+	border-radius: 10px;
+	margin: 10px;
+	padding: 10px;
 }
 
 .deleteButton {
 	font-size: 10px;
-	margin: 15px;
+	margin: 5px 0 5px 10px;
 	border-radius: 5px;
 }
 
-.message p {
+.message section {
 	display: inline-block;
 }
 
