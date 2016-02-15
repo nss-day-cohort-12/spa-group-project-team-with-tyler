@@ -1,0 +1,9 @@
+{
+	"messages" : [
+		{
+			"text" : "This is the first default message. Not saying it's the best default message, it's just the one at the top.",
+			"user" : "Tyler",
+			"timestamp" : "February 14, 2016 03:24:00"
+		}
+	]
+}
