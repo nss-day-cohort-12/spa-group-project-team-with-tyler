@@ -85,20 +85,27 @@ body {
 	font-size: 1.2em;
 	font-weight: bold;
 	font-family: helvetica;
+	border: 1px solid darkblue;
+	border-radius: 10px;
+	margin: 10px;
+	padding: 10px;
 }
 
 .deleteButton {
 	color: black;
 	font-size: 10px;
-	margin: 15px;
+	margin: 5px 0 5px 10px;
 	border-radius: 5px;
 }
 
-.message p {
+.message section {
 	display: inline-block;
 }
 
-
+.timestamp {
+	margin-top: -5px;
+	color: gray;
+}
 
 
 
