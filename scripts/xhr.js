@@ -9,7 +9,7 @@ var Chatty = (function(originalChatty){
 			var messagesFromJson = messageObject.messages;
 			// console.log(messagesFromJson);
 			messagesFromJson.forEach(function(currentObject){
-				Chatty.newMessage("outputField", currentObject.text, currentObject.timestamp);
+				Chatty.newMessage("outputField", currentObject.text, currentObject.timestamp, currentObject.user);
 				//Had to move the private array to the populate page, turns out variables aren't shared as easily as I thought.
 			});
 		})
