@@ -56,14 +56,16 @@ inputEl.addEventListener("keyup", function(e){
 			inputEl.value = "";
 			inputEl.classList.remove("editMode");
 		} else {
-			messageText = inputEl.value;
-			console.log(messageText);
-			Chatty.newMessage("outputField", messageText, `${new Date()}`, selectedUser);
-			inputEl.value = "";
-			clearButton.disabled = false;
-			if (document.getElementsByClassName("message").length > 20) {
-				oldMessage = document.getElementsByClassName("message")[0];
-				oldMessage.parentNode.removeChild(oldMessage);
+			if (inputEl.value !== "") {
+				messageText = inputEl.value;
+				console.log(messageText);
+				Chatty.newMessage("outputField", messageText, `${new Date()}`, selectedUser);
+				inputEl.value = "";
+				clearButton.disabled = false;
+				if (document.getElementsByClassName("message").length > 20) {
+					oldMessage = document.getElementsByClassName("message")[0];
+					oldMessage.parentNode.removeChild(oldMessage);
+				}
 			}
 		} 
 	}
