@@ -28,7 +28,7 @@ checkboxDark.addEventListener("click", function(){
 checkboxLarge.addEventListener("click", function(){
 	document.body.classList.toggle("large");
 	clearButton.classList.toggle("largeButton");
-	clarButton.classList.toggle("normalSizeButton");
+	clearButton.classList.toggle("normalSizeButton");
 	inputEl.classList.toggle("largeInput");
 	inputEl.classList.toggle("normalSizeInput");
 });
@@ -49,12 +49,13 @@ inputEl.addEventListener("keyup", function(e){
 	if (e.keyCode == 13) {
 		if (inputEl.classList.contains("editMode")) {
 			messageToBeEdited.getElementsByTagName("P")[0].innerHTML = inputEl.value;
+			messageToBeEdited.getElementsByClassName("timestamp")[0].innerHTML = `Edited: ${new Date()}`;
 			inputEl.value = "";
 			inputEl.classList.remove("editMode");
 		} else {
 			messageText = inputEl.value;
 			console.log(messageText);
-			Chatty.newMessage("outputField", messageText);
+			Chatty.newMessage("outputField", messageText, `${new Date()}`);
 			inputEl.value = "";
 			clearButton.disabled = false;
 			if (document.getElementsByClassName("message").length > 20) {
