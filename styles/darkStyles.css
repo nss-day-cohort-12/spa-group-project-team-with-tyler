@@ -94,7 +94,7 @@ body {
 .deleteButton {
 	color: black;
 	font-size: 10px;
-	margin: 15px;
+	margin: 5px 0 5px 10px;
 	border-radius: 5px;
 }
 
