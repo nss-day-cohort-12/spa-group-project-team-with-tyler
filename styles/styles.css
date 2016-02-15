@@ -115,11 +115,6 @@ label {
     }
 }
 
-/*
-span:nth-child(2n) {
-  color: #663399;
-}*/
-
 .timestamp {
 	margin-top: -5px;
 	color: gray;
