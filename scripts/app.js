@@ -12,12 +12,14 @@ var selectedUser = "Anonymous";;
 
 var themeLink = document.getElementById("themeLink");
 
+// CLEAR BUTTON FUNCTIONALITY
 clearButton.addEventListener("click", function(){
 	messageContainer.innerHTML = "";
 	clearButton.disabled = true;
 	console.log("cleared");
 });
 
+// ADD DARK THEME ON CHECKBOX CLICK
 checkboxDark.addEventListener("click", function(){
 	if (checkboxDark.checked === true) {
 		themeLink.href = "styles/darkStyles.css";
@@ -26,14 +28,12 @@ checkboxDark.addEventListener("click", function(){
 	}
 });
 
+// TOGGLE LARGE TEXT ON CHECKBOX CLICK
 checkboxLarge.addEventListener("click", function(){
 	document.getElementById("outputField").classList.toggle("large");
-	// clearButton.classList.toggle("largeButton");
-	// clearButton.classList.toggle("normalSizeButton");
-	// inputEl.classList.toggle("largeInput");
-	// inputEl.classList.toggle("normalSizeInput");
 });
 
+// DELETE CURRENT MESSAGE
 messageContainer.addEventListener("click", function(e){
 	if (e.target.innerHTML === "Delete") {
 		messageId = e.target.parentNode.id;
@@ -46,6 +46,7 @@ messageContainer.addEventListener("click", function(e){
 	}
 });
 
+// ADDS NEW MESSAGES AND ADDS TIMESTAMP TO NEW MESSAGES-ENABLES EDIT
 inputEl.addEventListener("keyup", function(e){
 	if (e.keyCode == 13) {
 		if (inputEl.classList.contains("editMode")) {
@@ -64,10 +65,11 @@ inputEl.addEventListener("keyup", function(e){
 				oldMessage = document.getElementsByClassName("message")[0];
 				oldMessage.parentNode.removeChild(oldMessage);
 			}
-		}
+		} 
 	}
 });
 
+// EDIT MESSAGES
 messageContainer.addEventListener("click", function(e){
 	if (e.target.innerHTML === "Edit") {
 		messageToBeEdited = e.target.parentNode;
@@ -80,56 +82,54 @@ messageContainer.addEventListener("click", function(e){
 	}
 });
 
+// LETTER DROP JQUERY FEATURE
 ;(function($) {
-$.fn.letterDrop = function() {
-  // Chainability
-  return this.each( function() { 
-  var obj = $( this );  
-  var drop = {
-    arr : obj.text().split( '' ), 
-    range : {
-      min : 1,
-      max : 9
-    }, 
-    styles : function() {
-      var dropDelays = '\n', addCSS;     
-       for ( i = this.range.min; i <= this.range.max; i++ ) {
-         dropDelays += '.ld' + i + ' { animation-delay: 1.' + i + 's; }\n';  
-       }
-        addCSS = $( '<style>' + dropDelays + '</style>' );
-        $( 'head' ).append( addCSS );
-    },
-    main : function() {
-      var dp = 0;
-      obj.text( '' ); 
-      $.each( this.arr, function( index, value ) {
-        dp = dp.randomInt( drop.range.min, drop.range.max ); 
-        if ( value === ' ' )
-          value = '&nbsp';
-          obj.append( '<span class="letterDrop ld' + dp + '">' + value + '</span>' );
-      });      
-    }
-  };
-   
-  Number.prototype.randomInt = function ( min, max ) {
-    return Math.floor( Math.random() * ( max - min + 1 ) + min );
-  };
-  
-  // Create styles
-  drop.styles();
+	$.fn.letterDrop = function() {
+	  // Chainability
+	  return this.each( function() { 
+	  var obj = $( this );  
+	  var drop = {
+	    arr : obj.text().split( '' ), 
+	    range : {
+	      min : 1,
+	      max : 9
+	    }, 
+	    styles : function() {
+	      var dropDelays = '\n', addCSS;     
+	       for ( i = this.range.min; i <= this.range.max; i++ ) {
+	         dropDelays += '.ld' + i + ' { animation-delay: 1.' + i + 's; }\n';  
+	       }
+	        addCSS = $( '<style>' + dropDelays + '</style>' );
+	        $( 'head' ).append( addCSS );
+	    },
+	    main : function() {
+	      var dp = 0;
+	      obj.text( '' ); 
+	      $.each( this.arr, function( index, value ) {
+	        dp = dp.randomInt( drop.range.min, drop.range.max ); 
+	        if ( value === ' ' )
+	          value = '&nbsp';
+	          obj.append( '<span class="letterDrop ld' + dp + '">' + value + '</span>' );
+	      });      
+	    }
+	  };
+	   
+	  Number.prototype.randomInt = function ( min, max ) {
+	    return Math.floor( Math.random() * ( max - min + 1 ) + min );
+	  };
+	  
+	  // Create styles
+	  drop.styles();
 
-  // Initialise
-  drop.main();
-  });
-
-};
-
+	  // Initialise
+	  drop.main();
+	  });
+	};
 }(jQuery));
-
 
 // USAGE
 $( 'h1' ).letterDrop();
-
+// END OF LETTER DROP JQUERY FEATURE
 
 Chatty.loadJSON();
 
