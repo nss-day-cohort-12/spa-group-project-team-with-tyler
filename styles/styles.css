@@ -43,7 +43,7 @@ body {
 }
 
 label {
-	margin-left: 30px;
+	margin-left: 5px;
 }
 
 .checkboxes{
@@ -81,7 +81,7 @@ label {
 
 .deleteButton {
 	font-size: 10px;
-	margin: 5px 0 5px 10px;
+	margin: 5px 0 5px 5px;
 	border-radius: 5px;
 }
 
@@ -137,7 +137,6 @@ h5 {
 	margin-left: 15px;
 }
 
-input[type= color] {
-	margin-left: 15px;
-	margin-bottom: 10px;
+input.checkboxes {
+	margin-left: 10px;
 }
