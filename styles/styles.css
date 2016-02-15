@@ -31,16 +31,6 @@ body {
 	margin-bottom: 22px;
 }
 
-.largeInput {
-	margin-top: 22px;
-	margin-bottom: 22px;
-}
-
-.largeButton {
-	margin-top: 22px;
-	margin-bottom: 31px;
-}
-
 /*Chatty logo text*/
 #logoText {
   -webkit-text-stroke: .5px black;
@@ -52,11 +42,11 @@ body {
 	padding-right: 25px;
 }
 
+label {
+	margin-left: 30px;
+}
+
 .checkboxes{
-	margin: 0;
-	padding-left: 200px;
-	padding-top: 10px;
-	padding-bottom: 5px;
 	font-family: 'Sansita One', cursive;
 	font-weight: 900;
 	font-size: 1.3em;
