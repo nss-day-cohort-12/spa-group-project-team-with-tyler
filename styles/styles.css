@@ -4,7 +4,7 @@ body {
 }
 
 .large {
-	font-size: 2em;
+	font-size: 1.4em;
 }
 
 /*Navbar Styling*/
@@ -120,3 +120,24 @@ label {
 	color: gray;
 }
 
+p {
+	display: inline-block;
+}
+
+p.author-name {
+	margin-right: 6px;
+}
+
+input.user-radio {
+	margin-left: 8px;
+	margin-right: 8px;
+}
+
+h5 {
+	margin-left: 15px;
+}
+
+input[type= color] {
+	margin-left: 15px;
+	margin-bottom: 10px;
+}
