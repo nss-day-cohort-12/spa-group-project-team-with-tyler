@@ -8,6 +8,7 @@ var messageId;
 var oldMessage;
 var messageToBeEdited;
 var paragraphEdit;
+var selectedUser = "Anonymous";;
 
 var themeLink = document.getElementById("themeLink");
 
@@ -48,14 +49,15 @@ messageContainer.addEventListener("click", function(e){
 inputEl.addEventListener("keyup", function(e){
 	if (e.keyCode == 13) {
 		if (inputEl.classList.contains("editMode")) {
-			messageToBeEdited.getElementsByTagName("P")[0].innerHTML = inputEl.value;
+			messageToBeEdited.getElementsByTagName("P")[0].innerHTML = `${selectedUser}:   `;
+			messageToBeEdited.getElementsByTagName("P")[1].innerHTML = `${inputEl.value}`;
 			messageToBeEdited.getElementsByClassName("timestamp")[0].innerHTML = `Edited: ${new Date()}`;
 			inputEl.value = "";
 			inputEl.classList.remove("editMode");
 		} else {
 			messageText = inputEl.value;
 			console.log(messageText);
-			Chatty.newMessage("outputField", messageText, `${new Date()}`);
+			Chatty.newMessage("outputField", messageText, `${new Date()}`, selectedUser);
 			inputEl.value = "";
 			clearButton.disabled = false;
 			if (document.getElementsByClassName("message").length > 20) {
@@ -70,7 +72,7 @@ messageContainer.addEventListener("click", function(e){
 	if (e.target.innerHTML === "Edit") {
 		messageToBeEdited = e.target.parentNode;
 		messageId = messageToBeEdited.id;
-		paragraphEdit = messageToBeEdited.getElementsByTagName("P")[0].innerHTML;
+		paragraphEdit = messageToBeEdited.getElementsByTagName("P")[1].innerHTML;
 		inputEl.value = paragraphEdit;
 		inputEl.classList.add("editMode");
 		inputEl.focus();
