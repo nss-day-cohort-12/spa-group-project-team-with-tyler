@@ -6,9 +6,10 @@ body {
 }
 
 .large {
-	font-size: 2em;
+	font-size: 1.4em;
 }
 
+/*Navbar Styling*/
 .navbar {
 	background-image: url("/images/Dark_Autumn_Plaid_Background.png");
 	background-size: contain;
@@ -32,16 +33,7 @@ body {
 	margin-bottom: 22px;
 }
 
-.largeInput {
-	margin-top: 22px;
-	margin-bottom: 22px;
-}
-
-.largeButton {
-	margin-top: 22px;
-	margin-bottom: 31px;
-}
-
+/*Chatty Logo Text*/
 #logoText {
   -webkit-text-stroke: .5px white;
 	font-family: 'Sansita One', cursive;
@@ -52,11 +44,11 @@ body {
 	padding-right: 25px;
 }
 
+label {
+	margin-left: 30px;
+}
+
 .checkboxes{
-	margin: 0;
-	padding-left: 200px;
-	padding-top: 10px;
-	padding-bottom: 5px;
 	font-family: 'Sansita One', cursive;
 	font-weight: 900;
 	font-size: 1.3em;
@@ -66,6 +58,7 @@ body {
 	color: beige;
 }
 
+/*Message board styling*/
 #messageHeader {
 	font-family: 'Sansita One', cursive;
 	color: beige;
