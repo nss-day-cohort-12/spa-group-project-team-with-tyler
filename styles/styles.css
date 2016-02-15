@@ -91,5 +91,9 @@ body {
 	border-radius: 5px;
 }
 
+.message p {
+	display: inline-block;
+}
+
 
 

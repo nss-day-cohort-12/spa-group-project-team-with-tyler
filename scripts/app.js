@@ -17,9 +17,9 @@ clearButton.addEventListener("click", function(){
 
 checkboxDark.addEventListener("click", function(){
 	if (checkboxDark.checked === true) {
-		themeLink.href = "styles/darkStyles.css"
+		themeLink.href = "styles/darkStyles.css";
 	} else {
-		themeLink.href = "styles/styles.css"
+		themeLink.href = "styles/styles.css";
 	}
 });
 
