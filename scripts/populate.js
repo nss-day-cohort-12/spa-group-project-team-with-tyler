@@ -7,10 +7,10 @@ var Chatty = (function(originalChatty){
 		return messagesArray;
 	}
 
-	originalChatty.newMessage = function (elId, msgString) {
+	originalChatty.newMessage = function(elId, msgString, time) {
 		containerDiv = document.getElementById(elId);
 		messagesArray.push(msgString);
-		outputString = `<div id="${messagesArray.length -1}" class="message newMessages"<p>${msgString}</p><button class="deleteButton">Delete</button></div>`;
+		outputString = `<div id="${messagesArray.length - 1}" class="message newMessages"><p>${msgString}</p><section class="timestamp">Posted: ${time}</section><button class="deleteButton">Delete</button><button class="deleteButton">Edit</button></div>`;
 		containerDiv.innerHTML += outputString;
 	}
 
