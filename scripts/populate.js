@@ -12,7 +12,7 @@ var Chatty = (function(originalChatty){
 		messagesArray.push(msgString);
 		outputString = `<div id="${messagesArray.length - 1}" class="message newMessages"><p>${msgString}</p><section class="timestamp">Posted: ${time}</section><button class="deleteButton">Delete</button><button class="deleteButton">Edit</button></div>`;
 		containerDiv.innerHTML += outputString;
-	}
+	};
 
 	originalChatty.deleteIndex = function(msgId) {
 		delete messagesArray[msgId];
