@@ -9,6 +9,8 @@ var oldMessage;
 var messageToBeEdited;
 var paragraphEdit;
 
+var themeLink = document.getElementById("themeLink");
+
 clearButton.addEventListener("click", function(){
 	messageContainer.innerHTML = "";
 	clearButton.disabled = true;
@@ -16,11 +18,19 @@ clearButton.addEventListener("click", function(){
 });
 
 checkboxDark.addEventListener("click", function(){
-	document.body.classList.toggle("dark");
+	if (checkboxDark.checked === true) {
+		themeLink.href = "styles/darkStyles.css";
+	} else {
+		themeLink.href = "styles/styles.css";
+	}
 });
 
 checkboxLarge.addEventListener("click", function(){
 	document.body.classList.toggle("large");
+	clearButton.classList.toggle("largeButton");
+	clarButton.classList.toggle("normalSizeButton");
+	inputEl.classList.toggle("largeInput");
+	inputEl.classList.toggle("normalSizeInput");
 });
 
 messageContainer.addEventListener("click", function(e){
@@ -68,3 +78,7 @@ messageContainer.addEventListener("click", function(e){
 });
 
 Chatty.loadJSON();
+
+
+
+
