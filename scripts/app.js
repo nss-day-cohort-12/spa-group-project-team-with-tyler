@@ -8,7 +8,7 @@ var messageId;
 var oldMessage;
 var messageToBeEdited;
 var paragraphEdit;
-var selectedUser = "Anonymous";;
+var selectedUser = "Anonymous";
 
 var themeLink = document.getElementById("themeLink");
 
@@ -55,6 +55,16 @@ inputEl.addEventListener("keyup", function(e){
 			messageToBeEdited.getElementsByClassName("timestamp")[0].innerHTML = `Edited: ${new Date()}`;
 			inputEl.value = "";
 			inputEl.classList.remove("editMode");
+		} else if (inputEl.value.indexOf("surge") > -1) {
+			console.log("surge");
+			messageText = inputEl.value;
+			messageContainer.innerHTML += `<div id="surge" class="message newMessages"><p class="author-name">${selectedUser}:</p><p>${messageText}</p><article></article><section class="timestamp">Posted: ${new Date()}</section><button class="deleteButton">Delete</button><button class="deleteButton">Surge</button></div>`;	
+			inputEl.value = "";
+			clearButton.disabled = false;
+			if (document.getElementsByClassName("message").length > 20) {
+				oldMessage = document.getElementsByClassName("message")[0];
+				oldMessage.parentNode.removeChild(oldMessage);
+			}
 		} else {
 			if (inputEl.value !== "") {
 				messageText = inputEl.value;
@@ -81,6 +91,10 @@ messageContainer.addEventListener("click", function(e){
 		inputEl.classList.add("editMode");
 		inputEl.focus();
 		console.log(inputEl.classList);
+	} else if (e.target.innerHTML === "Surge") {
+		document.body.style.backgroundImage = "url('images/surge-soda.jpg')";
+		document.body.style.backgroundRepeat = "no repeat";
+		document.body.style.backgroundSize = "cover";
 	}
 });
 
