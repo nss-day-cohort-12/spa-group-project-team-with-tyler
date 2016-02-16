@@ -13,8 +13,8 @@ button#new-theme {
 
 /*Navbar Styling*/
 .navbar {
-	background-image: url("/images/Autumn_Plaid_Background.png");
-	background-size: contain;
+	background-image: url("/images/Autumn_Plaid_Background_Light.png");
+	background-size: cover;
 	border-top: 3px solid #6E0700;
 	border-bottom: 3px solid #6E0700;
 	font-weight: 900;
