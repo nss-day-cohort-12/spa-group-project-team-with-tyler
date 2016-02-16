@@ -1,4 +1,4 @@
-var Chatty = (function(originalChatty){
+	var Chatty = (function(originalChatty){
 	var containerDiv;
 	var outputString = "";
 	var messagesArray = [];
