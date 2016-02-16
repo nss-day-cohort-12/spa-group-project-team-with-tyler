@@ -15,8 +15,8 @@ button#new-theme {
 
 /*Navbar Styling*/
 .navbar {
-	background-image: url("/images/Dark_Autumn_Plaid_Background.png");
-	background-size: contain;
+	background-image: url("/images/Autumn_Plaid_Background_Dark.png");
+	background-size: cover;
 	border-top: 3px solid beige;
 	border-bottom: 3px solid beige;
 	font-weight: 900;
